@@ -13,11 +13,11 @@ function h($str){
 // $e->getMessage()でその例外に関するメッセージが取得できる（どのようなエラーが発生しているかなど）
 function db_conn(){
     try{
-        $db_name = "bookmark";
-        $db_id = "root";
-        $db_pw = "root";
-        $db_host = "localhost";
-        $pdo = new PDO('mysql:kayo5884_bookmark2'.$db_name. ';charset=utf8;host=mysql57.kayo5884.sakura.ne.jp,kayo5884,********'.$db_host, $db_id, $db_pw);
+        $db_name = "kayo5884_bookmark2";
+        $db_id = "kayo5884";
+        $db_pw = "***********";
+        $db_host = "mysql57.kayo5884.sakura.ne.jp";
+        $pdo = new PDO('mysql:'.$db_name. ';charset=utf8;host='.$db_host, $db_id, $db_pw);
         return $pdo;
     } catch(PDOException $e){
         exit('DBConnectError:'.$e->getMessage());
